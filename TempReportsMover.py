@@ -16,10 +16,14 @@ Moves file from one location to another
 def moveFile(file):
     sourceFolder = data["sourceFolder"]
     destinationFolder = data["destinationFolder"]
-    print(f'Moving "{file}" from "{sourceFolder}" to "{destinationFolder}"')
     
     # os.rename won't work since we're moving to other drives while shutil.move is drive agnostic.
-    shutil.move(f"{sourceFolder}/{file}", f"{destinationFolder}/{file}")
+    try:
+        shutil.move(f"{sourceFolder}/{file}", f"{destinationFolder}/{file}")
+        print(f'Moved "{file}" from "{sourceFolder}" to "{destinationFolder}"')
+    except FileNotFoundError as e:
+        print(e)
+        pass
 
 
 
