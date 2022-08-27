@@ -24,3 +24,5 @@ Instead do this:
 ```
 C:/Users/quality/documents/hamza/Coding/TempReportsMover
 ```
+
+`defaultConfig.json` is the default configuration file. Adjust it to your liking and rename it to `config.json` to be recognized by the script
