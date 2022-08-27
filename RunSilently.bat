@@ -1,2 +1,2 @@
 @echo off
-python TempReportsMover.py &
+pythonw TempReportsMover.pyw &
